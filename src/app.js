@@ -32,7 +32,7 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Page!',
         imgg: 'me.png',
-        name: 'Sultan'
+        about: 'This site was created by Sultan. It uses data from mapbox.com & weatherstack.com'
     });
 });
 
