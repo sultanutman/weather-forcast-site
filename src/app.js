@@ -3,6 +3,8 @@ const express = require('express')
 const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const forcastWeather = require('./utils/forcast');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;

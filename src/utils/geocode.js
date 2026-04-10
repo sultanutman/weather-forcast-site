@@ -13,12 +13,14 @@ const geocode = (address, callback) => {
         (error, response) => {
             if (error) {
                 callback(error, undefined);
+
             } else if (
+                !response.body ||
                 response.body.features === 0 ||
-                !response.body.features[0] ||
-                !response.body.features[0].center
+                !response.body.features
             ) {
                 callback('Response missing data', undefined);
+
             } else {
                 const lat = response.body.features[0].center[1];
                 const long = response.body.features[0].center[0];
@@ -29,7 +31,6 @@ const geocode = (address, callback) => {
                     place
                 });
             }
-
         }
     );
 };
