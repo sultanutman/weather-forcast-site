@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js -e js,hbs"
+    "dev": "nodemon src/app.js -e js,hbs",
+    "debug": "node inspect src/app.js"
   },
   "keywords": [],
   "author": "",
